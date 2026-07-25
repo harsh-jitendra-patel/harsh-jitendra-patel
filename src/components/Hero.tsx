@@ -9,13 +9,14 @@ import BackgroundCanvas from "@/components/BackgroundCanvas";
 import { GryffindorTrigger } from "@/components/EasterEggTriggers";
 import clsx from "clsx";
 
+const roles = [
+  "Lead Software Engineer",
+  "Full-Stack Engineer",
+  "Azure Cloud Systems Architect",
+  "AI Workflow Innovator" // "AI-Assisted Software Developer"
+];
+
 export default function Hero() {
-  const roles = [
-    "Lead Software Engineer",
-    "Full-Stack Architect",
-    "Azure Cloud Systems Builder",
-    "AI Workflow Innovator"
-  ];
   const [roleIndex, setRoleIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -25,7 +26,7 @@ export default function Hero() {
 
   const attributes = [
     { text: "Certified Claude Architect", icon: Cpu },
-    { text: "OIDC & Snyk Secure", icon: ShieldCheck },
+    { text: "OIDC & Snyk Security Expert", icon: ShieldCheck },
     { text: "Azure Cloud Specialist", icon: Cloud },
     { text: "Full-Stack .NET & Angular Lead", icon: Code },
   ];
@@ -42,14 +43,24 @@ export default function Hero() {
   // Typewriter effect
   useEffect(() => {
     if (subIndex === roles[roleIndex].length + 1 && !reverse) {
-      const timeout = setTimeout(() => setReverse(true), 2000);
+      // Cycle roles every 10 seconds total.
+      // Total cycle time = typing duration + pause duration + deleting duration
+      // Typing duration = (N + 1) * 80 ms
+      // Deleting duration = (N + 1) * 40 ms
+      // Dynamic pause duration = 10,000 ms - (N + 1) * 120 ms
+      const typingAndDeletingDuration = (roles[roleIndex].length + 1) * 120;
+      const pauseDuration = Math.max(1000, 7000 - typingAndDeletingDuration);
+
+      const timeout = setTimeout(() => setReverse(true), pauseDuration);
       return () => clearTimeout(timeout);
     }
 
     if (subIndex === 0 && reverse) {
-      setReverse(false);
-      setRoleIndex((prev) => (prev + 1) % roles.length);
-      return;
+      const timeout = setTimeout(() => {
+        setReverse(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }, 0);
+      return () => clearTimeout(timeout);
     }
 
     const timeout = setTimeout(() => {
@@ -57,7 +68,7 @@ export default function Hero() {
     }, reverse ? 40 : 80);
 
     return () => clearTimeout(timeout);
-  }, [subIndex, reverse, roleIndex, roles]);
+  }, [subIndex, reverse, roleIndex]);
 
   // Blinking cursor
   useEffect(() => {
@@ -132,7 +143,7 @@ export default function Hero() {
             <span className="text-text-primary">{personalInfo.name.split(" ")[0]} </span>
             <span className="gradient-text">{personalInfo.name.split(" ")[1]}</span>
           </h1>
-          
+
           {/* Animated terminal typewriter title */}
           <div className="text-xl md:text-2xl font-mono font-bold text-text-secondary mb-6 h-8 flex items-center justify-center">
             <span className="text-accent mr-2">&gt;</span>
