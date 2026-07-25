@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--surface-light);
+  --color-accent: var(--accent);
+  --color-accent-emerald: var(--accent-emerald);
+  --color-accent-blue: var(--accent-blue);
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
+  --color-surface-lighter: var(--surface-lighter);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+:root, body.theme-dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --primary: #0f172a;
+  --surface: rgba(15, 23, 42, 0.7);
+  --surface-light: rgba(30, 41, 59, 0.5);
+  --surface-lighter: #334155;
+  --border: #334155;
+  --muted: #94a3b8;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --accent: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-blue: #3b82f6;
+}
+
+body.theme-light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #ffffff;
+  --surface: rgba(255, 255, 255, 0.85);
+  --surface-light: rgba(241, 245, 249, 0.85);
+  --surface-lighter: #e2e8f0;
+  --border: rgba(203, 213, 225, 0.8);
+  --muted: #64748b;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --accent: #0284c7;
+  --accent-emerald: #059669;
+  --accent-blue: #2563eb;
+}
+
+body.theme-gryffindor {
+  --background: #140407;
+  --foreground: #fef08a;
+  --primary: #740001;
+  --surface: rgba(116, 0, 1, 0.25);
+  --surface-light: rgba(153, 27, 27, 0.35);
+  --surface-lighter: #740001;
+  --border: rgba(245, 158, 11, 0.5);
+  --muted: #f59e0b;
+  --text-primary: #fef08a;
+  --text-secondary: #fcd34d;
+  --accent: #ef4444;
+  --accent-emerald: #f59e0b;
+  --accent-blue: #b91c1c;
+}
+
+body.theme-hufflepuff, body.theme-hogwarts {
+  --background: #0e0e11;
+  --foreground: #fef08a;
+  --primary: #18181b;
+  --surface: rgba(24, 24, 27, 0.85);
+  --surface-light: rgba(39, 39, 42, 0.75);
+  --surface-lighter: #3f3f46;
+  --border: rgba(234, 179, 8, 0.5);
+  --muted: #eab308;
+  --text-primary: #fef08a;
+  --text-secondary: #fde047;
+  --accent: #facc15;
+  --accent-emerald: #eab308;
+  --accent-blue: #d97706;
+}
+
+body.theme-ravenclaw {
+  --background: #050c1e;
+  --foreground: #e0f2fe;
+  --primary: #0f172a;
+  --surface: rgba(15, 23, 42, 0.85);
+  --surface-light: rgba(30, 41, 59, 0.75);
+  --surface-lighter: #1e293b;
+  --border: rgba(56, 189, 248, 0.5);
+  --muted: #38bdf8;
+  --text-primary: #e0f2fe;
+  --text-secondary: #bae6fd;
+  --accent: #0284c7;
+  --accent-emerald: #818cf8;
+  --accent-blue: #38bdf8;
+}
+
+body.theme-slytherin {
+  --background: #03140b;
+  --foreground: #a7f3d0;
+  --primary: #064e3b;
+  --surface: rgba(6, 78, 59, 0.35);
+  --surface-light: rgba(6, 95, 70, 0.45);
+  --surface-lighter: #047857;
+  --border: rgba(16, 185, 129, 0.5);
+  --muted: #10b981;
+  --text-primary: #a7f3d0;
+  --text-secondary: #6ee7b7;
+  --accent: #34d399;
+  --accent-emerald: #10b981;
+  --accent-blue: #059669;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background-color: rgba(6, 182, 212, 0.3);
+  color: #f1f5f9;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-lighter);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.glass-light {
+  background: var(--surface-light);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-light .gradient-text {
+  background: linear-gradient(135deg, #0284c7, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-gryffindor .gradient-text {
+  background: linear-gradient(135deg, #ef4444, #f59e0b, #fef08a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-hufflepuff .gradient-text, body.theme-hogwarts .gradient-text {
+  background: linear-gradient(135deg, #facc15, #eab308, #ca8a04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-ravenclaw .gradient-text {
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.theme-slytherin .gradient-text {
+  background: linear-gradient(135deg, #34d399, #10b981, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #06b6d4, #10b981);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.15), 0 0 40px rgba(6, 182, 212, 0.05);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15), 0 0 40px rgba(16, 185, 129, 0.05);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(59, 130, 246, 0.05);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(51, 65, 85, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.08) 1px, transparent 1px);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.5);
+}
+
+.glow-text-emerald {
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(6, 182, 212, 0.25); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.section-padding {
+  padding: 4rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 6rem 3rem;
+  }
+}
