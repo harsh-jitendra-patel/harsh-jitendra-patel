@@ -12,7 +12,6 @@
 
 I am a **Lead Software Engineer** with **11+ years of experience** in full-stack web development, cloud architectures, and technical leadership. I specialize in building enterprise-grade applications, optimizing complex platform workflows, and delivering resilient microservices across MarTech, Healthcare, and Automotive sectors.
 
-* 🌐 **Portfolio:** Check out my work at [harsh-jitendra-patel.github.io/harsh-jitendra-patel/](https://harsh-jitendra-patel.github.io/harsh-jitendra-patel/)
 * 💡 **What I Do:** Technical leadership, full-stack application architecture, AI-assisted development, and performance optimization.
 * 🛠️ **Current Focus:** Leading module architectures using Angular & ASP.NET Core, scaling media processor utilities, and mentoring engineering teams.
 * 📜 **Certification:** Claude Certified Architect - Foundations
