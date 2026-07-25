@@ -74,7 +74,7 @@ function Sparkline({ label, delay }: { label: string; delay: number }) {
 
 export default function Metrics() {
   return (
-    <section id="about" className="section-padding">
+    <section id="impact" className="section-padding">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

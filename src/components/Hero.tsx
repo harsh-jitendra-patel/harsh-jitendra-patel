@@ -177,7 +177,7 @@ export default function Hero() {
         className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20"
       >
         <a
-          href="#metrics"
+          href="#impact"
           className="flex flex-col items-center gap-1.5 text-xs font-mono text-muted hover:text-accent transition-colors cursor-pointer group"
           aria-label="Scroll down to metrics"
         >

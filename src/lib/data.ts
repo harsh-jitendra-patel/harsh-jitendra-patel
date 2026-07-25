@@ -6,7 +6,7 @@ export const personalInfo = {
   email: "harshp38@gmail.com",
   location: "Bengaluru / Ahmedabad, India",
   github: "https://github.com/harshjp722",
-  linkedin: "https://linkedin.com/in/harsh-patel-gtu-2015",
+  linkedin: "https://linkedin.com/in/harsh-jitendra-patel/",
   blog: "https://harshp38.wordpress.com",
   resumePdf: "/harsh-jitendra-patel/Harsh_Patel_ATS_Resume.pdf",
   summary:
@@ -14,10 +14,10 @@ export const personalInfo = {
 };
 
 export const metrics = [
-  { label: "Years Experience", value: 9, suffix: "+", prefix: "" },
-  { label: "Revenue Growth", value: 70, suffix: "%", prefix: "Up to " },
+  { label: "Years Experience", value: 11, suffix: "+", prefix: "" },
+  { label: "Products Shipped", value: 10, suffix: "+", prefix: "" },
   { label: "Vulnerability Compliance", value: 100, suffix: "%", prefix: "" },
-  { label: "Products Shipped", value: 5, suffix: "+", prefix: "" },
+  { label: "Revenue Growth", value: 70, suffix: "%", prefix: "Upto " },
 ];
 
 export const skillCategories = [
@@ -273,7 +273,7 @@ export const education = {
 };
 
 export const navLinks = [
-  { label: "About", href: "#about" },
+  { label: "Impact", href: "#impact" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Sandbox", href: "#architecture-sandbox" },
