@@ -66,8 +66,8 @@ I am a **Lead Software Engineer** with **11+ years of experience** in full-stack
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Harsh-Patel&show_icons=true&theme=radial&hide_border=true" alt="Harsh's GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Harsh-Patel&layout=compact&theme=radial&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=harsh-jitendra-patel&layout=compact&theme=radial&hide_border=true" alt="Top Languages" />
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=harsh-jitendra-patel&show_icons=true&theme=radial&hide_border=true" alt="Harsh's GitHub Stats" />
 </p>
 
 ---
