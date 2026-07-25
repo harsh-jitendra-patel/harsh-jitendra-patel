@@ -124,7 +124,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-muted">GitHub</p>
-                  <p className="text-sm font-semibold text-text-primary">github.com/harshjp722</p>
+                  <p className="text-sm font-semibold text-text-primary">github.com/harsh-jitendra-patel</p>
                 </div>
               </a>
             )}
@@ -179,7 +179,7 @@ export default function Contact() {
             className="glass rounded-2xl p-6 relative overflow-hidden"
           >
             <h3 className="text-lg font-bold text-text-primary mb-4">Send a Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="text-xs text-muted block mb-1.5 font-medium">Name</label>
