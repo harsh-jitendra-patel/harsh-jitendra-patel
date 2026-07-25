@@ -1,5 +1,6 @@
 # Hi there, I'm Harsh Patel 👋
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-100000?style=for-the-badge&logo=github&logoColor=white)](https://harsh-jitendra-patel.github.io/harsh-jitendra-patel/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harsh-jitendra-patel/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Harshp38@gmail.com)
 [![Blog](https://img.shields.io/badge/Blog-21759B?style=for-the-badge&logo=wordpress&logoColor=white)](https://harshp38.wordpress.com/)
@@ -10,6 +11,7 @@
 
 I am a **Lead Software Engineer** with **11+ years of experience** in full-stack web development, cloud architectures, and technical leadership. I specialize in building enterprise-grade applications, optimizing complex platform workflows, and delivering resilient microservices across MarTech, Healthcare, and Automotive sectors.
 
+* 🌐 **Portfolio:** Check out my work at [harsh-jitendra-patel.github.io/harsh-jitendra-patel/](https://harsh-jitendra-patel.github.io/harsh-jitendra-patel/)
 * 💡 **What I Do:** Technical leadership, full-stack application architecture, AI-assisted development, and performance optimization.
 * 🛠️ **Current Focus:** Leading module architectures using Angular & ASP.NET Core, scaling media processor utilities, and mentoring engineering teams.
 * 📜 **Certification:** Claude Certified Architect - Foundations
@@ -66,10 +68,10 @@ I am a **Lead Software Engineer** with **11+ years of experience** in full-stack
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=harsh-jitendra-patel&layout=compact&theme=radial&hide_border=true" alt="Top Languages" />
   <img src="https://github-readme-stats-fast.vercel.app/api?username=harsh-jitendra-patel&show_icons=true&theme=radial&hide_border=true" alt="Harsh's GitHub Stats" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=harsh-jitendra-patel&layout=compact&theme=radial&hide_border=true" alt="Top Languages" />
 </p>
 
 ---
 
-📫 **Get in Touch:** Feel free to connect via [LinkedIn](https://www.linkedin.com/in/harsh-jitendra-patel/) or reach out through email at `Harshp38@gmail.com`.
+📫 **Get in Touch:** Explore my [Portfolio Site](https://harsh-jitendra-patel.github.io/harsh-jitendra-patel/), connect via [LinkedIn](https://www.linkedin.com/in/harsh-jitendra-patel/), or email me at `Harshp38@gmail.com`.
