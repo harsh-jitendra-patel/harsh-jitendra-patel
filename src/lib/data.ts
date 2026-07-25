@@ -10,7 +10,7 @@ export const personalInfo = {
   blog: "https://harshp38.wordpress.com",
   resumePdf: "/Harsh_Patel_ATS_Resume.pdf",
   summary:
-    "Seasoned and results-oriented Lead Software Engineer with over 9+ years of hands-on experience in architecting, developing, and deploying scalable enterprise-grade web applications. Proven expertise across full-stack development, cloud computing (Microsoft Azure), microservices architecture, and technical team leadership. Demonstrates strong technical ownership in resolving complex production issues, optimizing high-latency database operations, and maintaining high software reliability. Skilled in driving AI tool integration (GitHub Copilot, Claude) to elevate development efficiency, alongside mentoring engineering cells, conducting rigorous code reviews, and enforcing ADA compliance and OIDC security standards.",
+    "Seasoned and results-oriented Lead Software Engineer with over 11+ years of hands-on experience in architecting, developing, and deploying scalable enterprise-grade web applications. Proven expertise across full-stack development, cloud computing (Microsoft Azure), microservices architecture, and technical team leadership. Demonstrates strong technical ownership in resolving complex production issues, optimizing high-latency database operations, and maintaining high software reliability. Skilled in driving AI tool integration (GitHub Copilot, Claude) to elevate development efficiency, alongside mentoring engineering cells, conducting rigorous code reviews, and enforcing ADA compliance and OIDC security standards.",
 };
 
 export const metrics = [
