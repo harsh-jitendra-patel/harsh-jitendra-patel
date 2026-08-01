@@ -298,3 +298,15 @@ body.theme-slytherin .gradient-text {
     padding: 6rem 3rem;
   }
 }
+
+/* Hide the loader on return visits before React hydrates. */
+html.loader-seen .terminal-loader {
+  display: none;
+}
+
+/* On return visits the loader is skipped, so reveal content immediately
+   instead of waiting for hydration to flip isLoaded. */
+html.loader-seen .loader-content {
+  opacity: 1;
+  pointer-events: auto;
+}

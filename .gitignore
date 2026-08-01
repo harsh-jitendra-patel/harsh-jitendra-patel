@@ -23,6 +23,9 @@
 # misc
 .DS_Store
 *.pem
+/career-portfolio/
+/docs/
+.ignore
 
 # debug
 npm-debug.log*

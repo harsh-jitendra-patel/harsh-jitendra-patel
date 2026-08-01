@@ -59,8 +59,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground antialiased transition-colors duration-300">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(sessionStorage.getItem("hp_loader_seen")){document.documentElement.classList.add("loader-seen")}}catch(e){}`,
+          }}
+        />
         <ThemeProvider>
           {children}
         </ThemeProvider>
