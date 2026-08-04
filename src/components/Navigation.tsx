@@ -123,109 +123,109 @@ export default function Navigation() {
           )}
         </button>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted hover:text-accent transition-colors duration-200 font-medium"
-              >
-                {link.label}
-              </a>
-            ))}
-
-            {/* House Cycle Button (if in House Mode) */}
-            {isHouseTheme && (
-              <button
-                onClick={() => cycleHouse(true)}
-                className="px-3 py-1.5 rounded-xl bg-amber-400/15 border border-amber-400/40 text-xs font-mono font-bold text-amber-300 flex items-center gap-1.5 hover:bg-amber-400/30 transition-colors cursor-pointer"
-                title="Cycle through Hogwarts Houses"
-              >
-                <Sparkles size={13} className="animate-spin text-amber-400" />
-                <span className="capitalize">Cycle ({house})</span>
-              </button>
-            )}
-
-            {/* Light / Dark Mode Switch */}
-            <button
-              onClick={toggleLightDark}
-              className="p-2 rounded-xl glass-light text-muted hover:text-text-primary transition-colors cursor-pointer"
-              aria-label="Toggle dark/light mode"
-              title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
-            >
-              {theme === "light" ? <Moon size={18} className="text-amber-500" /> : <Sun size={18} className="text-amber-400" />}
-            </button>
-
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
             <a
-              href="#contact"
-              className="px-4 py-2 text-sm font-semibold rounded-lg bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-all duration-200"
+              key={link.href}
+              href={link.href}
+              className="text-sm text-muted hover:text-accent transition-colors duration-200 font-medium"
             >
-              Get in Touch
+              {link.label}
             </a>
-          </div>
+          ))}
 
-          {/* Mobile Right Controls */}
-          <div className="flex items-center gap-2 md:hidden">
-            {isHouseTheme && (
-              <button
-                onClick={() => cycleHouse(true)}
-                className="px-2.5 py-1 rounded-xl bg-amber-400/15 border border-amber-400/40 text-xs font-mono font-bold text-amber-300 flex items-center gap-1"
-              >
-                <Sparkles size={12} className="animate-spin text-amber-400" />
-                <span className="capitalize">{house}</span>
-              </button>
-            )}
+          {/* House Cycle Button (if in House Mode) */}
+          {isHouseTheme && (
             <button
-              onClick={toggleLightDark}
-              className="p-2 rounded-xl glass-light text-muted hover:text-text-primary transition-colors cursor-pointer"
-              aria-label="Toggle dark/light mode"
+              onClick={() => cycleHouse(true)}
+              className="px-3 py-1.5 rounded-xl bg-amber-400/15 border border-amber-400/40 text-xs font-mono font-bold text-amber-300 flex items-center gap-1.5 hover:bg-amber-400/30 transition-colors cursor-pointer"
+              title="Cycle through Hogwarts Houses"
             >
-              {theme === "light" ? <Moon size={18} className="text-amber-500" /> : <Sun size={18} className="text-amber-400" />}
+              <Sparkles size={13} className="animate-spin text-amber-400" />
+              <span className="capitalize">Cycle ({house})</span>
             </button>
+          )}
 
-            <button
-              onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="text-muted hover:text-foreground transition-colors cursor-pointer"
-              aria-label="Toggle menu"
-            >
-              {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <a
+            href="#contact"
+            className="px-4 py-2 text-sm font-semibold rounded-lg bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-all duration-200"
+          >
+            Get in Touch
+          </a>
+
+          {/* Light / Dark Mode Switch */}
+          <button
+            onClick={toggleLightDark}
+            className="p-2 rounded-xl glass-light text-muted hover:text-text-primary transition-colors cursor-pointer"
+            aria-label="Toggle dark/light mode"
+            title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+          >
+            {theme === "light" ? <Moon size={18} className="text-amber-500" /> : <Sun size={18} className="text-amber-400" />}
+          </button>
         </div>
 
-        {/* Mobile Dropdown */}
-        <AnimatePresence>
-          {isMobileOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden glass mt-2 mx-4 rounded-xl overflow-hidden"
+        {/* Mobile Right Controls */}
+        <div className="flex items-center gap-2 md:hidden">
+          {isHouseTheme && (
+            <button
+              onClick={() => cycleHouse(true)}
+              className="px-2.5 py-1 rounded-xl bg-amber-400/15 border border-amber-400/40 text-xs font-mono font-bold text-amber-300 flex items-center gap-1"
             >
-              <div className="flex flex-col p-4 gap-3">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsMobileOpen(false)}
-                    className="text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-lg hover:bg-surface-lighter/50"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-                <a
-                  href="#contact"
-                  onClick={() => setIsMobileOpen(false)}
-                  className="text-sm font-semibold text-accent py-2 px-3 rounded-lg bg-accent/10 border border-accent/20 text-center mt-1"
-                >
-                  Get in Touch
-                </a>
-              </div>
-            </motion.div>
+              <Sparkles size={12} className="animate-spin text-amber-400" />
+              <span className="capitalize">{house}</span>
+            </button>
           )}
-        </AnimatePresence>
-      </motion.nav>
+          <button
+            onClick={toggleLightDark}
+            className="p-2 rounded-xl glass-light text-muted hover:text-text-primary transition-colors cursor-pointer"
+            aria-label="Toggle dark/light mode"
+          >
+            {theme === "light" ? <Moon size={18} className="text-amber-500" /> : <Sun size={18} className="text-amber-400" />}
+          </button>
+
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className="text-muted hover:text-foreground transition-colors cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown */}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden glass mt-2 mx-4 rounded-xl overflow-hidden"
+          >
+            <div className="flex flex-col p-4 gap-3">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileOpen(false)}
+                  className="text-sm text-muted hover:text-accent transition-colors py-2 px-3 rounded-lg hover:bg-surface-lighter/50"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setIsMobileOpen(false)}
+                className="text-sm font-semibold text-accent py-2 px-3 rounded-lg bg-accent/10 border border-accent/20 text-center mt-1"
+              >
+                Get in Touch
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }
